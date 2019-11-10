@@ -4,4 +4,4 @@ steps:
   - download
   - run:
       name: Run local fuzzing regression
-      command: fuzzit.sh local-regression
+      command: ./fuzzit.sh local-regression
