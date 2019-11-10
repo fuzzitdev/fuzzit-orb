@@ -1,0 +1,15 @@
+description: >
+  this will download fuzzit cli for a given OS.
+parameters:
+  os:
+    type: enum
+    default: "Linux"
+    enum: ["Linux", "Darwin", "Windows"]
+    description: The OS in which this command is run to download the appropriate fuzzit cli.
+steps:
+  - run:
+      name: Download Fuzzit CLI
+      command: |
+        wget -O fuzzit https://github.com/fuzzitdev/fuzzit/releases/latest/download/fuzzit_<<parameters.os>>_x86_64
+        chmod a+x fuzzit
+        sudo mv fuzzit /usr/local/bin/fuzzit

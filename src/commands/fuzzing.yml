@@ -1,0 +1,7 @@
+description: >
+  this will run fuzzit.sh script with fuzzing as the first argument.
+steps:
+  - download
+  - run:
+      name: Run fuzzing (submit fuzzers to fuzzit.dev)
+      command: ./fuzzit.sh fuzzing
