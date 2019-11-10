@@ -1,0 +1,7 @@
+description: >
+  this will run fuzzit.sh script with local-regression as the first argument.
+steps:
+  - download
+  - run:
+      name: Run local fuzzing regression
+      command: fuzzit.sh local-regression
